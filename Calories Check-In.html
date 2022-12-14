@@ -43,7 +43,7 @@ body {font-family: "Lato", sans-serif}
     
    <div class="w3-blue" id="tour">
       <div class="w3-row w3-padding-32">
-    <section>
+       <section>
   <nav>
     <ul>
       <p><b>STEPS:</b></p>
@@ -55,12 +55,29 @@ body {font-family: "Lato", sans-serif}
     <p>Click on Responses at the top center.</p>
     <p>Click on the green icon on the top right of the screen that says "Create a Spreadsheet," and choose to create a new spreadsheet.</p>
     <p>You can access your entries throughout the day with a time stamp.</p>
+    <p>In order to calculate your daily consumption of calories automatically, follow the steps below. </p>
     <p><b>How to Set Up your Spreadsheet:</b></p>
     <p><i>These steps may take a few minutes, but once they are already done, you won't have to do them again.</i></p>
-    <p>Before plugging anything in, insert the <b>sumif</b> function and drag down as far down as you can go. </p>
+    <p>Add a sheet to the spreadsheet by clicking on the "+" button on the bottom left of the screen. </p>
+    <p>In column A, first cell, type in "Date".</p>
+    
+    &nbsp;
+   
+    <p style="color:red;"><b><i><u>Example:</u></i></b></p>
+    <img src ="Table.png">
+    <p >In column B,  second cell, input the function <b>=TO_DATE(int(select cell A2)).</b>This will turn the timestamp into just the date. </p>
+    <p >Click on cell B2, hover over and click on the little blue square on the bottom right corner of the cell, drag it all the way down column B (a random date will appear, this can be ignored, as dates are inputted, this date will change).</p>
+    <p >In column C, cell 1, type in "Calories". </p>
+    <p >In cell C2, type in = , go to the first sheet and select all cells under "Number of Calories". </p>
+    <p >Click on cell C2, hover over and click on the little blue square on the bottom right corner of the cell, drag it all the way down column C.</p>
+    <p >In column E, cell 1, type in "Date" again. </p>
+    <p >In cell E2, type in <b>=UNIQUE(select all cells in column B).</b></p>
+    <p >Click on cell E2, hover over and click on the small blue square on the bottom right corner of the cell, drag it all the way down column E.</p>
+    <p>In column F, cell 1, type in "Daily Sum of Calories".</p>
+    <p>In cell F2, insert the function <b>=SUMIF(B2:B1000,E2,C2:C1000).</b></p>
+    <p>Click on cell F2, hover over and click on the little blue square on the bottom right corner of the cell, drag it all the way down column F (do not delete the 0's).  </p>
     </ul>
   </nav>
-
 
             
         
