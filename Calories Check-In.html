@@ -85,7 +85,16 @@ body {font-family: "Lato", sans-serif}
     <p>Click on cell F2, hover over and click on the little blue square on the bottom right corner of the cell, drag it all the way down column F (do not delete the 0's).  </p>
     </ul>
   </nav>
-
+<script>
+      function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+  </script>
             
         
         
